@@ -1,0 +1,291 @@
+{
+  "address": "0x74B625aDdB7c69bcb2bFe48A60C807Bb22B243Ea",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "priceFeedAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "NotOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_propertyId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approveInspection",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_propertyId",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkPropertyOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_propertyId",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkPropertyValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_propertyId",
+          "type": "uint256"
+        }
+      ],
+      "name": "closeSale",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_propertyId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "negotiaite",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_propertId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "openSale",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_propertyId",
+          "type": "uint256"
+        }
+      ],
+      "name": "purchase",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_propertyId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_propertyHash",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "sell",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xb84c92714473409627c5c20c3361e037eb6e96476ffd38d764a397180f937b5d",
+  "receipt": {
+    "to": null,
+    "from": "0x99db9F61834dfD1B5010120f68378c11f990a14d",
+    "contractAddress": "0x74B625aDdB7c69bcb2bFe48A60C807Bb22B243Ea",
+    "transactionIndex": 56,
+    "gasUsed": "811370",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x86405371d31a956dd0121a2565c7e347f8ded7483d6db943262a2f6ee546f917",
+    "transactionHash": "0xb84c92714473409627c5c20c3361e037eb6e96476ffd38d764a397180f937b5d",
+    "logs": [],
+    "blockNumber": 4495215,
+    "cumulativeGasUsed": "8072552",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "560552e8b012bcdbd068f80fa2f0cf0b",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"priceFeedAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"NotOwner\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_propertyId\",\"type\":\"uint256\"}],\"name\":\"approveInspection\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_propertyId\",\"type\":\"uint256\"}],\"name\":\"checkPropertyOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_propertyId\",\"type\":\"uint256\"}],\"name\":\"checkPropertyValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_propertyId\",\"type\":\"uint256\"}],\"name\":\"closeSale\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_propertyId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"negotiaite\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_propertId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"openSale\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_propertyId\",\"type\":\"uint256\"}],\"name\":\"purchase\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_propertyId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_propertyHash\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"sell\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Muhammad Fahad\",\"details\":\"This implement priceFeed as library\",\"kind\":\"dev\",\"methods\":{},\"title\":\"BlockEstate, blockchain based solution for sell and purchase of property\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"this contract is used for record of property ownership\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/BlockEstate.sol\":\"BlockEstate\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface AggregatorV3Interface {\\n  function decimals() external view returns (uint8);\\n\\n  function description() external view returns (string memory);\\n\\n  function version() external view returns (uint256);\\n\\n  function getRoundData(\\n    uint80 _roundId\\n  ) external view returns (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound);\\n\\n  function latestRoundData()\\n    external\\n    view\\n    returns (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound);\\n}\\n\",\"keccak256\":\"0xfe4e8bb4861bb3860ba890ab91a3b818ec66e5a8f544fb608cfcb73f433472cd\",\"license\":\"MIT\"},\"contracts/BlockEstate.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"./PriceConverter.sol\\\";\\r\\n\\r\\nerror NotOwner();\\r\\n\\r\\n/** @title BlockEstate, blockchain based solution for sell and purchase of property\\r\\n * @author Muhammad Fahad\\r\\n * @notice this contract is used for record of property ownership\\r\\n * @dev This implement priceFeed as library\\r\\n */\\r\\n\\r\\ncontract BlockEstate{\\r\\n    using PriceConverter for uint256;\\r\\n\\r\\n    struct Property{\\r\\n        address propertyHash;\\r\\n        address propertyOwner;\\r\\n        uint256 value;\\r\\n        bool isApproved;\\r\\n        bool isAvailble;\\r\\n    }\\r\\n    mapping (uint256 => Property) properties;\\r\\n    address immutable owner;\\r\\n\\r\\n    AggregatorV3Interface priceFeed;\\r\\n\\r\\n    constructor(address priceFeedAddress){\\r\\n        owner = msg.sender;\\r\\n        priceFeed = AggregatorV3Interface(priceFeedAddress);\\r\\n    }\\r\\n\\r\\n    modifier onlyOwner{\\r\\n        if(owner == msg.sender) revert NotOwner();\\r\\n        _;\\r\\n    }\\r\\n\\r\\n    function sell(uint256 _propertyId, address _propertyHash, uint256 _value) public {\\r\\n        properties[_propertyId] = Property({\\r\\n            propertyHash: _propertyHash,\\r\\n            propertyOwner: msg.sender,\\r\\n            value: _value,\\r\\n            isApproved: false,\\r\\n            isAvailble: true\\r\\n        });\\r\\n    }\\r\\n\\r\\n    function purchase(uint256 _propertyId) public payable {\\r\\n        Property storage prop = properties[_propertyId];\\r\\n        require(prop.isApproved);\\r\\n        require(prop.isAvailble);\\r\\n        uint256 ethAmountInUsd = msg.value.getConversionRate(priceFeed);\\r\\n        require(ethAmountInUsd >= prop.value*1e18);\\r\\n        if(ethAmountInUsd > prop.value*1e18){\\r\\n            payable(msg.sender).transfer(msg.value - prop.value);\\r\\n        }\\r\\n        payable(prop.propertyOwner).transfer(prop.value);\\r\\n        prop.propertyOwner = msg.sender;\\r\\n        prop.isAvailble = false;\\r\\n        prop.value = 0;\\r\\n    }\\r\\n\\r\\n    function approveInspection(uint256 _propertyId) public onlyOwner {\\r\\n        properties[_propertyId].isApproved = true;\\r\\n    }\\r\\n\\r\\n    function negotiaite(uint256 _propertyId, uint256 _value) public {\\r\\n        Property storage prop = properties[_propertyId];\\r\\n        require(msg.sender == prop.propertyOwner);\\r\\n        prop.value = _value;\\r\\n    }\\r\\n\\r\\n    function closeSale(uint256 _propertyId) public {\\r\\n        Property storage prop = properties[_propertyId];\\r\\n        require(msg.sender == prop.propertyOwner);\\r\\n        prop.isAvailble = false;\\r\\n    }\\r\\n\\r\\n    function openSale(uint256 _propertId, uint256 _value) public {\\r\\n        Property storage prop = properties[_propertId];\\r\\n        require(msg.sender == prop.propertyOwner);\\r\\n        prop.isAvailble = true;\\r\\n        prop.value = _value;\\r\\n        prop.isApproved = false;\\r\\n    }\\r\\n\\r\\n    function checkPropertyOwner(uint256 _propertyId) public view returns(address) {\\r\\n        return properties[_propertyId].propertyOwner;\\r\\n    }\\r\\n    function checkPropertyValue(uint256 _propertyId) public view returns(uint256) {\\r\\n        return properties[_propertyId].value;\\r\\n    }\\r\\n\\r\\n}\",\"keccak256\":\"0xf234297f376e65a96932378cfb7f766e2c7af4daa650c798ddb7b7b32891169e\",\"license\":\"MIT\"},\"contracts/PriceConverter.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\\\";\\r\\n\\r\\nlibrary PriceConverter {\\r\\n  function getPrice(\\r\\n    AggregatorV3Interface priceFeed\\r\\n  ) public view returns (uint256) {\\r\\n    (\\r\\n      ,\\r\\n      /* uint80 roundID */ int256 price /*uint startedAt*/ /*uint timeStamp*/ /*uint80 answeredInRound*/,\\r\\n      ,\\r\\n      ,\\r\\n\\r\\n    ) = priceFeed.latestRoundData();\\r\\n\\r\\n    return uint256(price * 1e10);\\r\\n  }\\r\\n\\r\\n  function getConversionRate(\\r\\n    uint256 ethAmount,\\r\\n    AggregatorV3Interface priceFeed\\r\\n  ) internal view returns (uint256) {\\r\\n    uint256 ethPrice = getPrice(priceFeed);\\r\\n    uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;\\r\\n    return ethAmountInUsd;\\r\\n  }\\r\\n}\",\"keccak256\":\"0x3e69b88221e42fefe5acd19c805902b4ce048ee4d680d9f344e6dd327ae1057d\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b50604051610e99380380610e9983398181016040528101906100329190610110565b3373ffffffffffffffffffffffffffffffffffffffff1660808173ffffffffffffffffffffffffffffffffffffffff168152505080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061013d565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006100dd826100b2565b9050919050565b6100ed816100d2565b81146100f857600080fd5b50565b60008151905061010a816100e4565b92915050565b600060208284031215610126576101256100ad565b5b6000610134848285016100fb565b91505092915050565b608051610d4161015860003960006104c00152610d416000f3fe60806040526004361061007b5760003560e01c806368c134ea1161004e57806368c134ea14610138578063a4223d5314610161578063db82c4371461018a578063efef39a1146101c75761007b565b80634f57715414610080578063526b347e146100a957806365186d5f146100d257806367cdf6c91461010f575b600080fd5b34801561008c57600080fd5b506100a760048036038101906100a29190610914565b6101e3565b005b3480156100b557600080fd5b506100d060048036038101906100cb9190610914565b610263565b005b3480156100de57600080fd5b506100f960048036038101906100f49190610954565b61031d565b60405161010691906109c2565b60405180910390f35b34801561011b57600080fd5b5061013660048036038101906101319190610a09565b61035c565b005b34801561014457600080fd5b5061015f600480360381019061015a9190610954565b6104a7565b005b34801561016d57600080fd5b5061018860048036038101906101839190610954565b61055d565b005b34801561019657600080fd5b506101b160048036038101906101ac9190610954565b6105f0565b6040516101be9190610a6b565b60405180910390f35b6101e160048036038101906101dc9190610954565b61060f565b005b600080600084815260200190815260200160002090508060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461025557600080fd5b818160020181905550505050565b600080600084815260200190815260200160002090508060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146102d557600080fd5b60018160030160016101000a81548160ff02191690831515021790555081816002018190555060008160030160006101000a81548160ff021916908315150217905550505050565b600080600083815260200190815260200160002060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b6040518060a001604052808373ffffffffffffffffffffffffffffffffffffffff1681526020013373ffffffffffffffffffffffffffffffffffffffff1681526020018281526020016000151581526020016001151581525060008085815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002015560608201518160030160006101000a81548160ff02191690831515021790555060808201518160030160016101000a81548160ff021916908315150217905550905050505050565b3373ffffffffffffffffffffffffffffffffffffffff167f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff160361052c576040517f30cd747100000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600160008083815260200190815260200160002060030160006101000a81548160ff02191690831515021790555050565b600080600083815260200190815260200160002090508060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146105cf57600080fd5b60008160030160016101000a81548160ff0219169083151502179055505050565b6000806000838152602001908152602001600020600201549050919050565b600080600083815260200190815260200160002090508060030160009054906101000a900460ff1661064057600080fd5b8060030160019054906101000a900460ff1661065b57600080fd5b6000610692600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff163461080c90919063ffffffff16565b9050670de0b6b3a764000082600201546106ac9190610ab5565b8110156106b857600080fd5b670de0b6b3a764000082600201546106d09190610ab5565b81111561072e573373ffffffffffffffffffffffffffffffffffffffff166108fc8360020154346107019190610af7565b9081150290604051600060405180830381858888f1935050505015801561072c573d6000803e3d6000fd5b505b8160010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc83600201549081150290604051600060405180830381858888f1935050505015801561079c573d6000803e3d6000fd5b50338260010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060008260030160016101000a81548160ff02191690831515021790555060008260020181905550505050565b60008061081883610848565b90506000670de0b6b3a764000085836108319190610ab5565b61083b9190610b5a565b9050809250505092915050565b6000808273ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a060405180830381865afa158015610896573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108ba9190610c18565b5050509150506402540be400816108d19190610c93565b915050919050565b600080fd5b6000819050919050565b6108f1816108de565b81146108fc57600080fd5b50565b60008135905061090e816108e8565b92915050565b6000806040838503121561092b5761092a6108d9565b5b6000610939858286016108ff565b925050602061094a858286016108ff565b9150509250929050565b60006020828403121561096a576109696108d9565b5b6000610978848285016108ff565b91505092915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006109ac82610981565b9050919050565b6109bc816109a1565b82525050565b60006020820190506109d760008301846109b3565b92915050565b6109e6816109a1565b81146109f157600080fd5b50565b600081359050610a03816109dd565b92915050565b600080600060608486031215610a2257610a216108d9565b5b6000610a30868287016108ff565b9350506020610a41868287016109f4565b9250506040610a52868287016108ff565b9150509250925092565b610a65816108de565b82525050565b6000602082019050610a806000830184610a5c565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610ac0826108de565b9150610acb836108de565b9250828202610ad9816108de565b91508282048414831517610af057610aef610a86565b5b5092915050565b6000610b02826108de565b9150610b0d836108de565b9250828203905081811115610b2557610b24610a86565b5b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b6000610b65826108de565b9150610b70836108de565b925082610b8057610b7f610b2b565b5b828204905092915050565b600069ffffffffffffffffffff82169050919050565b610baa81610b8b565b8114610bb557600080fd5b50565b600081519050610bc781610ba1565b92915050565b6000819050919050565b610be081610bcd565b8114610beb57600080fd5b50565b600081519050610bfd81610bd7565b92915050565b600081519050610c12816108e8565b92915050565b600080600080600060a08688031215610c3457610c336108d9565b5b6000610c4288828901610bb8565b9550506020610c5388828901610bee565b9450506040610c6488828901610c03565b9350506060610c7588828901610c03565b9250506080610c8688828901610bb8565b9150509295509295909350565b6000610c9e82610bcd565b9150610ca983610bcd565b9250828202610cb781610bcd565b91507f80000000000000000000000000000000000000000000000000000000000000008414600084121615610cef57610cee610a86565b5b8282058414831517610d0457610d03610a86565b5b509291505056fea26469706673582212202dc9c38d9c7df97aabe7575682b6d30ae87f93ddab99db5afafa186e3de4966a64736f6c63430008130033",
+  "deployedBytecode": "0x60806040526004361061007b5760003560e01c806368c134ea1161004e57806368c134ea14610138578063a4223d5314610161578063db82c4371461018a578063efef39a1146101c75761007b565b80634f57715414610080578063526b347e146100a957806365186d5f146100d257806367cdf6c91461010f575b600080fd5b34801561008c57600080fd5b506100a760048036038101906100a29190610914565b6101e3565b005b3480156100b557600080fd5b506100d060048036038101906100cb9190610914565b610263565b005b3480156100de57600080fd5b506100f960048036038101906100f49190610954565b61031d565b60405161010691906109c2565b60405180910390f35b34801561011b57600080fd5b5061013660048036038101906101319190610a09565b61035c565b005b34801561014457600080fd5b5061015f600480360381019061015a9190610954565b6104a7565b005b34801561016d57600080fd5b5061018860048036038101906101839190610954565b61055d565b005b34801561019657600080fd5b506101b160048036038101906101ac9190610954565b6105f0565b6040516101be9190610a6b565b60405180910390f35b6101e160048036038101906101dc9190610954565b61060f565b005b600080600084815260200190815260200160002090508060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461025557600080fd5b818160020181905550505050565b600080600084815260200190815260200160002090508060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146102d557600080fd5b60018160030160016101000a81548160ff02191690831515021790555081816002018190555060008160030160006101000a81548160ff021916908315150217905550505050565b600080600083815260200190815260200160002060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b6040518060a001604052808373ffffffffffffffffffffffffffffffffffffffff1681526020013373ffffffffffffffffffffffffffffffffffffffff1681526020018281526020016000151581526020016001151581525060008085815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002015560608201518160030160006101000a81548160ff02191690831515021790555060808201518160030160016101000a81548160ff021916908315150217905550905050505050565b3373ffffffffffffffffffffffffffffffffffffffff167f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff160361052c576040517f30cd747100000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600160008083815260200190815260200160002060030160006101000a81548160ff02191690831515021790555050565b600080600083815260200190815260200160002090508060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146105cf57600080fd5b60008160030160016101000a81548160ff0219169083151502179055505050565b6000806000838152602001908152602001600020600201549050919050565b600080600083815260200190815260200160002090508060030160009054906101000a900460ff1661064057600080fd5b8060030160019054906101000a900460ff1661065b57600080fd5b6000610692600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff163461080c90919063ffffffff16565b9050670de0b6b3a764000082600201546106ac9190610ab5565b8110156106b857600080fd5b670de0b6b3a764000082600201546106d09190610ab5565b81111561072e573373ffffffffffffffffffffffffffffffffffffffff166108fc8360020154346107019190610af7565b9081150290604051600060405180830381858888f1935050505015801561072c573d6000803e3d6000fd5b505b8160010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc83600201549081150290604051600060405180830381858888f1935050505015801561079c573d6000803e3d6000fd5b50338260010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060008260030160016101000a81548160ff02191690831515021790555060008260020181905550505050565b60008061081883610848565b90506000670de0b6b3a764000085836108319190610ab5565b61083b9190610b5a565b9050809250505092915050565b6000808273ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a060405180830381865afa158015610896573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108ba9190610c18565b5050509150506402540be400816108d19190610c93565b915050919050565b600080fd5b6000819050919050565b6108f1816108de565b81146108fc57600080fd5b50565b60008135905061090e816108e8565b92915050565b6000806040838503121561092b5761092a6108d9565b5b6000610939858286016108ff565b925050602061094a858286016108ff565b9150509250929050565b60006020828403121561096a576109696108d9565b5b6000610978848285016108ff565b91505092915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006109ac82610981565b9050919050565b6109bc816109a1565b82525050565b60006020820190506109d760008301846109b3565b92915050565b6109e6816109a1565b81146109f157600080fd5b50565b600081359050610a03816109dd565b92915050565b600080600060608486031215610a2257610a216108d9565b5b6000610a30868287016108ff565b9350506020610a41868287016109f4565b9250506040610a52868287016108ff565b9150509250925092565b610a65816108de565b82525050565b6000602082019050610a806000830184610a5c565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610ac0826108de565b9150610acb836108de565b9250828202610ad9816108de565b91508282048414831517610af057610aef610a86565b5b5092915050565b6000610b02826108de565b9150610b0d836108de565b9250828203905081811115610b2557610b24610a86565b5b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b6000610b65826108de565b9150610b70836108de565b925082610b8057610b7f610b2b565b5b828204905092915050565b600069ffffffffffffffffffff82169050919050565b610baa81610b8b565b8114610bb557600080fd5b50565b600081519050610bc781610ba1565b92915050565b6000819050919050565b610be081610bcd565b8114610beb57600080fd5b50565b600081519050610bfd81610bd7565b92915050565b600081519050610c12816108e8565b92915050565b600080600080600060a08688031215610c3457610c336108d9565b5b6000610c4288828901610bb8565b9550506020610c5388828901610bee565b9450506040610c6488828901610c03565b9350506060610c7588828901610c03565b9250506080610c8688828901610bb8565b9150509295509295909350565b6000610c9e82610bcd565b9150610ca983610bcd565b9250828202610cb781610bcd565b91507f80000000000000000000000000000000000000000000000000000000000000008414600084121615610cef57610cee610a86565b5b8282058414831517610d0457610d03610a86565b5b509291505056fea26469706673582212202dc9c38d9c7df97aabe7575682b6d30ae87f93ddab99db5afafa186e3de4966a64736f6c63430008130033",
+  "devdoc": {
+    "author": "Muhammad Fahad",
+    "details": "This implement priceFeed as library",
+    "kind": "dev",
+    "methods": {},
+    "title": "BlockEstate, blockchain based solution for sell and purchase of property",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "this contract is used for record of property ownership",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 70,
+        "contract": "contracts/BlockEstate.sol:BlockEstate",
+        "label": "properties",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_uint256,t_struct(Property)65_storage)"
+      },
+      {
+        "astId": 75,
+        "contract": "contracts/BlockEstate.sol:BlockEstate",
+        "label": "priceFeed",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_contract(AggregatorV3Interface)45"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_contract(AggregatorV3Interface)45": {
+        "encoding": "inplace",
+        "label": "contract AggregatorV3Interface",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_uint256,t_struct(Property)65_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct BlockEstate.Property)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Property)65_storage"
+      },
+      "t_struct(Property)65_storage": {
+        "encoding": "inplace",
+        "label": "struct BlockEstate.Property",
+        "members": [
+          {
+            "astId": 56,
+            "contract": "contracts/BlockEstate.sol:BlockEstate",
+            "label": "propertyHash",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 58,
+            "contract": "contracts/BlockEstate.sol:BlockEstate",
+            "label": "propertyOwner",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address"
+          },
+          {
+            "astId": 60,
+            "contract": "contracts/BlockEstate.sol:BlockEstate",
+            "label": "value",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 62,
+            "contract": "contracts/BlockEstate.sol:BlockEstate",
+            "label": "isApproved",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bool"
+          },
+          {
+            "astId": 64,
+            "contract": "contracts/BlockEstate.sol:BlockEstate",
+            "label": "isAvailble",
+            "offset": 1,
+            "slot": "3",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

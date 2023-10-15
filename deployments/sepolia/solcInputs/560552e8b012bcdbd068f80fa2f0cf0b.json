@@ -1,0 +1,41 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ninterface AggregatorV3Interface {\n  function decimals() external view returns (uint8);\n\n  function description() external view returns (string memory);\n\n  function version() external view returns (uint256);\n\n  function getRoundData(\n    uint80 _roundId\n  ) external view returns (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound);\n\n  function latestRoundData()\n    external\n    view\n    returns (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound);\n}\n"
+    },
+    "contracts/BlockEstate.sol": {
+      "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\nimport \"./PriceConverter.sol\";\r\n\r\nerror NotOwner();\r\n\r\n/** @title BlockEstate, blockchain based solution for sell and purchase of property\r\n * @author Muhammad Fahad\r\n * @notice this contract is used for record of property ownership\r\n * @dev This implement priceFeed as library\r\n */\r\n\r\ncontract BlockEstate{\r\n    using PriceConverter for uint256;\r\n\r\n    struct Property{\r\n        address propertyHash;\r\n        address propertyOwner;\r\n        uint256 value;\r\n        bool isApproved;\r\n        bool isAvailble;\r\n    }\r\n    mapping (uint256 => Property) properties;\r\n    address immutable owner;\r\n\r\n    AggregatorV3Interface priceFeed;\r\n\r\n    constructor(address priceFeedAddress){\r\n        owner = msg.sender;\r\n        priceFeed = AggregatorV3Interface(priceFeedAddress);\r\n    }\r\n\r\n    modifier onlyOwner{\r\n        if(owner == msg.sender) revert NotOwner();\r\n        _;\r\n    }\r\n\r\n    function sell(uint256 _propertyId, address _propertyHash, uint256 _value) public {\r\n        properties[_propertyId] = Property({\r\n            propertyHash: _propertyHash,\r\n            propertyOwner: msg.sender,\r\n            value: _value,\r\n            isApproved: false,\r\n            isAvailble: true\r\n        });\r\n    }\r\n\r\n    function purchase(uint256 _propertyId) public payable {\r\n        Property storage prop = properties[_propertyId];\r\n        require(prop.isApproved);\r\n        require(prop.isAvailble);\r\n        uint256 ethAmountInUsd = msg.value.getConversionRate(priceFeed);\r\n        require(ethAmountInUsd >= prop.value*1e18);\r\n        if(ethAmountInUsd > prop.value*1e18){\r\n            payable(msg.sender).transfer(msg.value - prop.value);\r\n        }\r\n        payable(prop.propertyOwner).transfer(prop.value);\r\n        prop.propertyOwner = msg.sender;\r\n        prop.isAvailble = false;\r\n        prop.value = 0;\r\n    }\r\n\r\n    function approveInspection(uint256 _propertyId) public onlyOwner {\r\n        properties[_propertyId].isApproved = true;\r\n    }\r\n\r\n    function negotiaite(uint256 _propertyId, uint256 _value) public {\r\n        Property storage prop = properties[_propertyId];\r\n        require(msg.sender == prop.propertyOwner);\r\n        prop.value = _value;\r\n    }\r\n\r\n    function closeSale(uint256 _propertyId) public {\r\n        Property storage prop = properties[_propertyId];\r\n        require(msg.sender == prop.propertyOwner);\r\n        prop.isAvailble = false;\r\n    }\r\n\r\n    function openSale(uint256 _propertId, uint256 _value) public {\r\n        Property storage prop = properties[_propertId];\r\n        require(msg.sender == prop.propertyOwner);\r\n        prop.isAvailble = true;\r\n        prop.value = _value;\r\n        prop.isApproved = false;\r\n    }\r\n\r\n    function checkPropertyOwner(uint256 _propertyId) public view returns(address) {\r\n        return properties[_propertyId].propertyOwner;\r\n    }\r\n    function checkPropertyValue(uint256 _propertyId) public view returns(uint256) {\r\n        return properties[_propertyId].value;\r\n    }\r\n\r\n}"
+    },
+    "contracts/PriceConverter.sol": {
+      "content": "//SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\nimport \"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\";\r\n\r\nlibrary PriceConverter {\r\n  function getPrice(\r\n    AggregatorV3Interface priceFeed\r\n  ) public view returns (uint256) {\r\n    (\r\n      ,\r\n      /* uint80 roundID */ int256 price /*uint startedAt*/ /*uint timeStamp*/ /*uint80 answeredInRound*/,\r\n      ,\r\n      ,\r\n\r\n    ) = priceFeed.latestRoundData();\r\n\r\n    return uint256(price * 1e10);\r\n  }\r\n\r\n  function getConversionRate(\r\n    uint256 ethAmount,\r\n    AggregatorV3Interface priceFeed\r\n  ) internal view returns (uint256) {\r\n    uint256 ethPrice = getPrice(priceFeed);\r\n    uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;\r\n    return ethAmountInUsd;\r\n  }\r\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
