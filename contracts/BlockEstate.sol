@@ -48,8 +48,8 @@ contract BlockEstate{
 
     function purchase(uint256 _propertyId) public payable {
         Property storage prop = properties[_propertyId];
-        require(prop.isApproved);
-        require(prop.isAvailble);
+        require(prop.isAvailble, "Not for sell!");
+        require(prop.isApproved, "Not Approved Yet!");
         uint256 ethAmountInUsd = msg.value.getConversionRate(priceFeed);
         require(ethAmountInUsd >= prop.value*1e18);
         if(ethAmountInUsd > prop.value*1e18){
@@ -90,6 +90,16 @@ contract BlockEstate{
     }
     function checkPropertyValue(uint256 _propertyId) public view returns(uint256) {
         return properties[_propertyId].value;
+    }
+    function checkIsApproved(uint256 _propertyId) public view returns(bool) {
+        return properties[_propertyId].isApproved;
+    }
+    function checkIsAvailble(uint256 _propertId) public view returns(bool) {
+        return properties[_propertId].isAvailble;
+    }
+
+    function getPriceFeed() public view returns(AggregatorV3Interface) {
+        return priceFeed;
     }
 
 }
